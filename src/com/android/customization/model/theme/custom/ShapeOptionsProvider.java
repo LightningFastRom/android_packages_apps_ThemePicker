@@ -53,7 +53,7 @@ import java.util.List;
 public class ShapeOptionsProvider extends ThemeComponentOptionProvider<ShapeOption> {
 
     private static final String TAG = "ShapeOptionsProvider";
-    private static final int MAX_ICON_SHAPE_PREVIEWS = 6;
+    private static final int MAX_ICON_SHAPE_PREVIEWS = 8;
 
     private final String[] mShapePreviewIconPackages;
     private int mThumbSize;
