@@ -65,7 +65,7 @@
         <item name="android:textColor">@android:color/white</item>
     </style>
 
-    <style name="ActionSecondaryButton" parent="android:Widget.DeviceDefault.Button.Borderless.Colored">
+    <style name="ActionSecondaryButton" parent="android:Widget.DeviceDefault.ImageButton">
         <item name="android:textColor">@android:color/white</item>
     </style>
 

@@ -43,20 +43,20 @@
             android:layout_height="@dimen/custom_theme_nav_height"
             android:layout_weight="1"
             android:paddingHorizontal="12dp">
-            <Button
-                android:id="@+id/previous_button"
-                style="@style/ActionSecondaryButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="start|center_vertical"
-                android:text="@string/custom_theme_previous"/>
-            <Button
-                android:id="@+id/next_button"
-                style="@style/ActionPrimaryButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end|center_vertical"
-                android:text="@string/custom_theme_next"/>
+        <Button
+            android:id="@+id/previous_button"
+			style="@style/ActionSecondaryButton"
+            android:layout_width="@dimen/next_button_width"
+            android:layout_height="wrap_content"
+			android:drawableLeft="@drawable/ic_arrow_back_24px"
+            android:layout_gravity="start|center_vertical"/>
+        <Button
+            android:id="@+id/next_button"
+			style="@style/ActionSecondaryButton"
+            android:layout_width="@dimen/next_button_width"
+            android:layout_height="wrap_content"
+			android:drawableRight="@drawable/ic_arrow_forward_24px"
+            android:layout_gravity="end|center_vertical"/>
         </FrameLayout>
     </LinearLayout>
 

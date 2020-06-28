@@ -112,6 +112,10 @@
         [CHAR LIMIT=NONE] -->
     <string name="apply_theme_error_msg">There was a problem applying the style</string>
 
+	<!-- Label for a button that takes the user to the next step when configuring a custom theme.
+        [CHAR LIMIT=20] -->
+    <string name="custom_theme_blank"></string>
+
     <!-- Label for a button that takes the user to the next step when configuring a custom theme.
         [CHAR LIMIT=20] -->
     <string name="custom_theme_next">Next</string>
