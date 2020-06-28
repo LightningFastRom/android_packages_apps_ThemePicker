@@ -17,14 +17,19 @@ package com.android.customization.picker.theme;
 
 import android.app.AlertDialog.Builder;
 import android.content.Intent;
+import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
+import android.graphics.drawable.Drawable;
 import android.view.View;
+import android.view.Gravity;
+import android.widget.FrameLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
+import androidx.core.content.res.ResourcesCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
@@ -252,8 +257,17 @@ public class CustomThemeActivity extends FragmentActivity implements
 
     private void updateNavigationButtonLabels() {
         mPreviousButton.setVisibility(mCurrentStep == 0 ? View.INVISIBLE : View.VISIBLE);
-        mNextButton.setText((mCurrentStep < mSteps.size() -1) ? R.string.custom_theme_next
+		
+		// Nest Button Code
+		FrameLayout.LayoutParams Params = new FrameLayout.LayoutParams((mCurrentStep < mSteps.size() -1) ? 48
+                : FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.WRAP_CONTENT);
+		Params.gravity = Gravity.END | Gravity.CENTER_VERTICAL;
+		mNextButton.setLayoutParams(Params);
+        mNextButton.setText((mCurrentStep < mSteps.size() -1) ? R.string.custom_theme_blank
                 : R.string.apply_btn);
+		mNextButton.setCompoundDrawablesWithIntrinsicBounds(0, 0, (mCurrentStep < mSteps.size() -1) ? R.drawable.ic_arrow_forward_24px
+                : 0, 0);
+		
     }
 
     @Override
@@ -313,7 +327,7 @@ public class CustomThemeActivity extends FragmentActivity implements
     private class FontStep extends ComponentStep<FontOption> {
 
         protected FontStep(ThemeComponentOptionProvider<FontOption> provider,
-                int position) {
+                           int position) {
             super(R.string.font_component_title, provider, position);
         }
 
@@ -329,7 +343,7 @@ public class CustomThemeActivity extends FragmentActivity implements
     private class IconStep extends ComponentStep<IconOption> {
 
         protected IconStep(ThemeComponentOptionProvider<IconOption> provider,
-                int position) {
+                           int position) {
             super(R.string.icon_component_title, provider, position);
         }
 
@@ -345,7 +359,7 @@ public class CustomThemeActivity extends FragmentActivity implements
     private class ColorStep extends ComponentStep<ColorOption> {
 
         protected ColorStep(ThemeComponentOptionProvider<ColorOption> provider,
-                int position) {
+                            int position) {
             super(R.string.color_component_title, provider, position);
         }
 
@@ -361,7 +375,7 @@ public class CustomThemeActivity extends FragmentActivity implements
     private class ShapeStep extends ComponentStep<ShapeOption> {
 
         protected ShapeStep(ThemeComponentOptionProvider<ShapeOption> provider,
-                int position) {
+                            int position) {
             super(R.string.shape_component_title, provider, position);
         }
 
