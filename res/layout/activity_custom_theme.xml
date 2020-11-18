@@ -39,14 +39,14 @@
 			style="@style/ActionSecondaryButton"
             android:layout_width="@dimen/next_button_width"
             android:layout_height="wrap_content"
-			app:icon="@drawable/ic_arrow_back_24px"
+			android:drawableLeft="@drawable/ic_arrow_back_24px"
             android:layout_gravity="start|center_vertical"/>
         <Button
             android:id="@+id/next_button"
 			style="@style/ActionSecondaryButton"
             android:layout_width="@dimen/next_button_width"
             android:layout_height="wrap_content"
-			app:icon="@drawable/ic_arrow_forward_24px"
+			android:drawableRight="@drawable/ic_arrow_forward_24px"
             android:layout_gravity="end|center_vertical"/>
     </FrameLayout>
 </LinearLayout>

@@ -61,10 +61,12 @@
     <!-- Common components and widgets -->
     <style name="TitleTextAppearance" parent="@android:style/TextAppearance.DeviceDefault.Widget.ActionBar.Title"/>
 
-    <style name="ActionPrimaryButton" parent="android:Widget.DeviceDefault.Button.Colored"/>
+    <style name="ActionPrimaryButton" parent="android:Widget.DeviceDefault.Button.Colored">
+        <item name="android:textColor">@color/material_white_100</item>
+    </style>
 
     <style name="ActionSecondaryButton" parent="android:Widget.DeviceDefault.ImageButton">
-        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textColor">@color/material_white_100</item>
     </style>
 
     <!-- Option tiles -->

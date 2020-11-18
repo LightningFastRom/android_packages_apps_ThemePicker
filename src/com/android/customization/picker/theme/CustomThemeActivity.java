@@ -258,8 +258,10 @@ public class CustomThemeActivity extends FragmentActivity implements
     private void updateNavigationButtonLabels() {
         mPreviousButton.setVisibility(mCurrentStep == 0 ? View.INVISIBLE : View.VISIBLE);
 		
+		int nextButtonWidth = (int)this.getResources().getDimension(R.dimen.next_button_width);
+		
 		// Nest Button Code
-		FrameLayout.LayoutParams Params = new FrameLayout.LayoutParams((mCurrentStep < mSteps.size() -1) ? 48
+		FrameLayout.LayoutParams Params = new FrameLayout.LayoutParams((mCurrentStep < mSteps.size() -1) ? nextButtonWidth
                 : FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.WRAP_CONTENT);
 		Params.gravity = Gravity.END | Gravity.CENTER_VERTICAL;
 		mNextButton.setLayoutParams(Params);
