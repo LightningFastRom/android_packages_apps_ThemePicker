@@ -69,7 +69,9 @@
 
     <style name="ActionPrimaryButton" parent="android:Widget.DeviceDefault.Button.Colored"/>
 
-    <style name="ActionSecondaryButton" parent="android:Widget.DeviceDefault.Button.Borderless.Colored"/>
+    <style name="ActionSecondaryButton" parent="android:Widget.DeviceDefault.ImageButton">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
 
     <style name="CardTitleTextAppearance" parent="TitleTextAppearance">
         <item name="android:textStyle">bold</item>
