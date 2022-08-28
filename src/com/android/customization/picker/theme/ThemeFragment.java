@@ -443,7 +443,6 @@ public class ThemeFragment extends ToolbarFragment {
                         }
 
                         Switch enabledSwitch = card.findViewById(R.id.preview_toggle_selected);
-                        enabledSwitch.setThumbTintList(tintList);
                         enabledSwitch.setTrackTintList(tintList);
 
                         ColorStateList seekbarTintList = ColorStateList.valueOf(accentColor);

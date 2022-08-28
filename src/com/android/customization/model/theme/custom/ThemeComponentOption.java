@@ -378,7 +378,6 @@ public abstract class ThemeComponentOption implements CustomizationOption<ThemeC
             }
 
             Switch enabledSwitch = container.findViewById(R.id.preview_toggle_selected);
-            enabledSwitch.setThumbTintList(tintList);
             enabledSwitch.setTrackTintList(tintList);
 
             ColorStateList seekbarTintList = ColorStateList.valueOf(accentColor);

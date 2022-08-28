@@ -42,8 +42,8 @@
     <color name="text_color_light">@color/material_white_text</color>
 
     <color name="control_grey">#757575</color>
-    <color name="switch_track_tint">#acacac</color>
-    <color name="switch_thumb_tint">#f1f1f1</color>
+    <color name="switch_track_tint">@*android:color/accent_device_default_light</color>
+    <color name="switch_thumb_tint">@android:color/white</color>
 
     <color name="tile_enabled_icon_color">@color/material_white_100</color>
     <color name="tile_disabled_icon_color">#2d2d2d</color>
